@@ -18,10 +18,13 @@ repositories {
 	mavenCentral()
 }
 
-extra["netflixDgsVersion"] = "9.1.2"
+//extra["netflixDgsVersion"] = "8.5.3" // this works, see AutoConfigurationTest
+extra["netflixDgsVersion"] = "8.5.4" // this does not work, see AutoConfigurationTest
+//extra["netflixDgsVersion"] = "9.1.2" // this does not work, see AutoConfigurationTest
 
 dependencies {
 	implementation("com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter")
+//	implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter") // this works with all versions because ExcludeAutoConfigurationsEnvironmentPostProcessor is not present
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter-test")
