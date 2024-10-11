@@ -25,7 +25,13 @@ extra["netflixDgsVersion"] = "8.5.4" // this does not work, see AutoConfiguratio
 
 dependencies {
 	implementation("com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter")
-//	implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter") // this works with all versions because ExcludeAutoConfigurationsEnvironmentPostProcessor is not present
+
+// this works with all versions of DGS because ExcludeAutoConfigurationsEnvironmentPostProcessor is not present
+//	implementation("org.springframework.boot:spring-boot-starter")
+//	implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter")
+
+
+
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter-test")
